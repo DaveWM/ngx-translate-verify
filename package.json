@@ -1,6 +1,6 @@
 {
   "name": "ngx-translate-verify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "node": "0.12.x"
   },
