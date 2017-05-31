@@ -1,6 +1,6 @@
-(defproject verify-translations "0.1.0-SNAPSHOT"
-  :description "FIXME: write this!"
-  :url "http://example.com/FIXME"
+(defproject ngx-translate-verify "0.1.0"
+  :description "CLI tool for verifying ngx translate translation files"
+  :url "https://github.com/DaveWM/ngx-translate-verify"
 
   :min-lein-version "2.5.3"
 
@@ -14,8 +14,7 @@
   :plugins [[lein-cljsbuild "1.1.6"]
             [lein-figwheel "0.5.10"]]
 
-  :clean-targets ["server.js"
-                  "target"]
+  :clean-targets ["target"]
 
   :source-paths ["src"]
 
@@ -31,15 +30,15 @@
               :figwheel true
               :compiler {
                 :main verify-translations.core
-                :output-to "target/server_dev/verify_translations.js"
-                :output-dir "target/server_dev"
+                :output-to "target/dev/main.js"
+                :output-dir "target/dev"
                 :target :nodejs
                 :optimizations :none
                 :source-map true}}
              {:id "prod"
               :source-paths ["src"]
               :compiler {
-                :output-to "target/server_prod/server.js"
-                :output-dir "target/server_prod"
+                :output-to "target/prod/main.js"
+                :output-dir "target/prod"
                 :target :nodejs
                 :optimizations :simple}}]})

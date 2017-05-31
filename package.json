@@ -1,5 +1,5 @@
 {
-  "name": "verify-translations",
+  "name": "ngx-translate-verify",
   "version": "0.1.0",
   "private": "true",
   "engines": {
@@ -10,5 +10,9 @@
   "devDependencies": {
     "source-map-support": "0.4.0",
     "ws": "0.8.1"
+  },
+  "bin": "./target/prod/main.js",
+  "scripts": {
+    "prepublish": "lein do clean, cljsbuild once prod"
   }
 }
